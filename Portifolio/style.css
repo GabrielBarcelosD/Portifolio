@@ -1,0 +1,1535 @@
+* {
+
+  margin: 0;
+  padding: 0;
+
+}
+
+@import url(' https://www.fontspace.com/harry-p-font-f44342');
+
+@font-face {
+  font-family: Harry;
+  src: url(HarryP-MVZ6w.ttf);
+
+}
+
+@font-face {
+  font-family: Loud;
+  src: url(f037a6954cba2a9c-s.p.ttf);
+
+}
+
+.logo {
+
+  width: 10vh;
+  display: flex;
+  justify-items: auto;
+  padding: 30px;
+}
+
+body {
+
+  background: rgb(255, 216, 14);
+  background: linear-gradient(90deg, rgba(255, 216, 14, 1) 12%, rgba(221, 89, 24, 1) 100%);
+}
+
+header {
+
+  display: flex;
+  align-items: center;
+  column-gap: 64px;
+  width: 100%;
+  max-width: 1440px;
+  padding-top: 24px;
+
+
+}
+
+.navigation {
+  display: flex;
+  align-items: center;
+  column-gap: 48px;
+  list-style: none;
+  position: absolute;
+  right: 300px;
+
+}
+
+.navigation_link {
+  font-size: 20px;
+  font-weight: 300;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-family: Harry;
+  text-decoration: none;
+  color: #000;
+  position: relative;
+}
+
+
+.navigation_link:hover {
+  color: #ffffff;
+}
+
+.navigation_link::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+
+  width: 60%;
+  height: 1px;
+  background: rgb(255, 255, 255);
+
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.4s;
+}
+
+.navigation_link:hover::after {
+
+  transform: scaleX(1);
+  transform-origin: left;
+  transition: transform 0.4s;
+
+}
+
+.button_nav {
+
+  background: transparent;
+  width: 20vh;
+  height: 7vh;
+  position: absolute;
+  right: 13vh;
+  border: #000 solid 2px;
+  transition: transform 1;
+  border-radius: 5%;
+  top: 8vh;
+}
+
+.button_nav:hover {
+
+  color: white;
+  cursor: pointer;
+  background-color: transparent;
+  border: #ffffff solid 2px;
+  transition: transform 1;
+}
+
+
+
+.text {
+
+  width: 82vh;
+  height: 75vh;
+  display: inline-block;
+  overflow: hidden;
+
+
+}
+
+.text h1 {
+
+  text-align: left;
+  font-family: loud;
+  font-size: 6vh;
+  position: absolute;
+  bottom: 40vh;
+  padding-left: 10px;
+
+
+
+}
+
+.text h2 {
+
+  text-align: left;
+  font-family: loud cursive;
+  font-size: 4vh;
+  position: absolute;
+  bottom: 35vh;
+  padding-left: 10px;
+
+
+
+}
+
+
+.text h1 span.typed-text {
+  font-weight: normal;
+  color: #000000;
+}
+
+.text h1 span.cursor {
+  display: inline-block;
+  background-color: #d3caca;
+  margin-left: 0.1rem;
+  width: 3px;
+  animation: blink 1s infinite;
+}
+
+.text h1 span.cursor.typing {
+  animation: none;
+}
+
+@keyframes blink {
+  0% {
+    background-color: #d3caca;
+  }
+
+  49% {
+    background-color: #d3caca;
+  }
+
+  50% {
+    background-color: transparent;
+  }
+
+  99% {
+    background-color: transparent;
+  }
+
+  100% {
+    background-color: #d3caca;
+  }
+}
+
+.caixa {
+
+  width: 200px;
+  height: 455px;
+  display: inline-block;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  padding: 0 36px;
+  cursor: pointer;
+  border-radius: 30px;
+  left: 35vh;
+
+}
+
+.cover-image {
+
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.fotofundo {
+
+  transition: all 0.5s;
+  position: absolute;
+  width: 100%;
+  z-index: -1;
+  background: #000;
+  border-radius: 30px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+
+}
+
+.fotofundo img {
+
+  border-radius: 30px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 20px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+
+}
+
+.caixa:hover .fotofundo {
+
+  transform: perspective(900px) translateY(-5%) rotateX(25deg) translateZ(0);
+  box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.25);
+  -webkit-box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.25);
+  -moz-box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.25);
+}
+
+.fotofundo::before,
+.fotofundo::after {
+
+  content: " ";
+  opacity: 0;
+  width: 100%;
+  height: 80px;
+  transition: all 0.5s;
+  border-radius: 30px;
+  position: absolute;
+  left: 0;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+
+}
+
+.fotofundo::before {
+  top: 0;
+  height: 100%;
+  background-image: linear-gradient(to top, transparent 46%, rgba(12, 13, 19, 0.5) 68%, rgba(12, 13, 19) 97%);
+}
+
+.fotofundo::after {
+
+  bottom: 0;
+  opacity: 1;
+  background-image: linear-gradient(to bottom, transparent 46%, rgba(12, 13, 19, 0.5) 68%, rgba(12, 13, 19) 97%);
+}
+
+.caixa:hover .fotofundo::before,
+.fotofundo::after {
+
+  opacity: 1;
+
+}
+
+.caixa:hover .caixa::after {
+
+  height: 120px;
+
+}
+
+
+
+.caixa:hover .cover-image {
+
+  opacity: 0.3;
+
+}
+
+.Personagem {
+
+  width: 100%;
+  opacity: 0;
+  transition: all 0.5s;
+  filter: drop-shadow(2px 2px 2px #000);
+  position: absolute;
+  z-index: -1;
+  top: -50px;
+  left: 20px;
+
+}
+
+.caixa:hover .Personagem {
+
+  opacity: 1;
+  transform: translate3d(5%, -20%, 670px);
+
+}
+
+.borda {
+
+  height: 3.6vh;
+  background-color: #000;
+
+}
+
+.borda .image-borda {
+
+  position: absolute;
+  overflow: hidden;
+  top: 72%;
+  left: 28%;
+  z-index: -1;
+}
+
+.Pagina02 {
+  background-color: #000;
+  width: 100%;
+  height: 100%;
+  padding-top: 400px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: -65vh;
+  z-index: 0;
+
+}
+
+
+
+.card {
+  max-width: 500px;
+  width: 500px;
+  background-color: rgb(59, 25, 25);
+  box-shadow: 0 10px 90px #00000024;
+  text-align: center;
+  font-size: 20px;
+  border-radius: 15px;
+  display: inline-block;
+  margin-left: 10vh;
+}
+
+.card .card-header {
+  position: relative;
+  height: 290px;
+  
+}
+
+.card .card-header .profile-img {
+  width: 130px;
+  height: 130px;
+  border-radius: 1000px;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 8px solid #000000;
+  box-shadow: 0 0 20px #00000033;
+}
+
+.card .card-header .profile-img:hover {
+  width: 150px;
+  height: 150px;
+  border: 8px solid #000000;
+}
+
+.card .card-body {
+  padding: 0px 40px;
+}
+
+.card .card-body .name {
+  top: -27vh;
+  position: relative;
+  font-size: 40px;
+  font-weight: bold;
+  color: rgba(255, 216, 14, 1);
+  font-family: Loud;
+}
+
+.card .card-body .name:hover {
+  font-size: 40px;
+  top: -27vh;
+  color: rgb(233, 233, 233);
+}
+
+.card .card-body .texto-card{
+
+font-family: Georgia, 'Times New Roman', Times, serif;
+color: #fff;
+top: -17vh;
+position: relative;
+
+
+}
+
+.card .card-body .job {
+  top: -15vh;
+  position: relative;
+  font-size: 18px;
+  font-family: Loud;
+  color: rgba(255, 216, 14, 1);
+}
+
+.card .social-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.card .social-links .social-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  width: 40px;
+  background-color: rgba(255, 216, 14, 1);
+  color: #ffffff;
+  font-size: 20px;
+  border-radius: 100%;
+  text-decoration: none;
+  margin: 0 13px 30px 0;
+}
+
+.card .social-links .social-icon:last-child {
+  margin-right: 0;
+}
+
+.card .social-links .social-icon:hover {
+  background-color: #d885af;
+  height: 50px;
+  width: 50px;
+  text-decoration: none;
+}
+
+.card .card-footer {
+  background-color: rgba(255, 216, 14, 1);
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  padding: 20px 0 20px 0;
+}
+.card .card-footer .count {
+  font-size: 14px;
+}
+
+@media screen and (max-width: 575px) {
+    .card {
+        width: 96%;
+    }
+
+    .card .card-body {
+        padding: 5px 20px;
+    }
+}
+
+.habilidades {
+
+  width: 60vh;
+  height: 60vh;
+  border-radius: 20px;
+  background-color: transparent;
+  overflow: hidden;
+  margin-left: 105vh;
+  position: relative;
+  top: -120vh;
+  display: inline-block;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.habilidades h1 {
+
+
+  text-align: center;
+  font-family: Loud;
+  font-size: 40px;
+  color: rgb(88, 0, 0);
+
+}
+
+.habilidades h1:hover {
+  color: #ffffff;
+}
+
+.habilidades h1::after {
+  content: '';
+  position: absolute;
+  left: 10%;
+  top: 50px;
+
+  width: 10%;
+  height: 2px;
+  background: rgb(255, 255, 255);
+
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.4s;
+}
+
+.habilidades h1:hover::after {
+
+  transform: scaleX(1);
+  transform-origin: left;
+  transition: transform 0.4s;
+
+}
+
+.habilidades h3{
+
+
+  color: rgba(255, 216, 14, 1);
+  font-family: Harry;
+  font-size: 23px;
+  font-weight: -5px;
+  margin-bottom: 1vh;
+
+}
+
+
+.habilidades ul {
+
+  list-style: none;
+
+
+}
+
+.habilidades ul li {
+
+  margin: 20px 10px;
+  color: #fff;
+
+}
+
+.habilidades .barras {
+
+  background: linear-gradient(90deg, rgba(221, 89, 24, 1) 12%, rgba(255, 216, 14, 1) 100%);
+  display: block;
+  height: 20px;
+  position: relative;
+  border-radius: 20px;
+  transition: .5s ease-in-out;
+  overflow: hidden;
+
+
+}
+
+.barras>span {
+
+  height: 20px;
+  background: linear-gradient(90deg, rgb(46, 2, 2) 12%, rgb(88, 0, 0) 100%);
+  position: absolute;
+  overflow: hidden;
+
+}
+
+.html {
+
+  width: 70%;
+  animation: html 3s;
+}
+
+.css {
+  width: 65%;
+  animation: css 3s;
+}
+
+.javascript {
+
+  width: 50%;
+  animation: javascript 3s;
+}
+
+.c {
+
+  width: 65%;
+  animation: c 3s;
+}
+
+@keyframes html {
+
+  0% {
+
+    width: 0%;
+
+  }
+
+  100% {
+
+    width: 70%;
+  }
+
+}
+
+@keyframes css {
+
+  0% {
+
+    width: 0%;
+
+  }
+
+  100% {
+
+    width: 65%;
+  }
+
+}
+
+@keyframes javascript {
+
+  0% {
+
+    width: 0%;
+
+  }
+
+  100% {
+
+    width: 50%;
+  }
+
+}
+
+@keyframes c {
+
+  0% {
+
+    width: 0%;
+
+  }
+
+  100% {
+
+    width: 65%;
+  }
+
+}
+
+.design {
+
+  width: 60vh;
+  height: 60vh;
+  border-radius: 30px;
+  overflow: hidden;
+  background-color: transparent;
+  margin-left: 105vh;
+  margin-top: -15vh;
+  display: inline-block;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  top: -115vh;
+}
+
+.design ul {
+
+  list-style: none;
+
+
+}
+
+.design h1 {
+
+  text-align: center;
+  font-family: Loud;
+  font-size: 40px;
+  color: rgb(88, 0, 0);
+
+}
+
+.design h1:hover {
+  color: #ffffff;
+}
+
+.design h1::after {
+  content: '';
+  position: absolute;
+  left: 25%;
+  top: 50px;
+
+  width: 10%;
+  height: 2px;
+  background: rgb(255, 255, 255);
+
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.4s;
+}
+
+.design h1:hover::after {
+
+  transform: scaleX(1);
+  transform-origin: left;
+  transition: transform 0.4s;
+
+}
+
+.design h3{
+
+
+  color: rgba(255, 216, 14, 1);
+  font-family: Harry;
+  font-size: 25px;
+  font-weight: -5px;
+  margin-bottom: 1vh;
+
+}
+
+
+.design ul li {
+
+  margin: 20px 10px;
+  color: #fff;
+
+}
+
+.design .barras {
+
+  background: linear-gradient(90deg, rgba(221, 89, 24, 1) 12%, rgba(255, 216, 14, 1) 100%);
+  display: block;
+  height: 20px;
+  position: relative;
+  border-radius: 20px;
+  transition: .5s ease-in-out;
+  overflow: hidden;
+}
+
+.barras>span {
+
+  height: 20px;
+  background: linear-gradient(90deg, rgb(46, 2, 2) 12%, rgb(88, 0, 0) 100%);
+  position: absolute;
+  overflow: hidden;
+}
+
+.EdicaoDeFotos {
+
+  width: 70%;
+  animation: EdicaoDeFotos 3s;
+}
+
+.figma {
+  width: 55%;
+  animation: figma 3s;
+}
+
+.WebDesigner {
+
+  width: 45%;
+  animation: WebDesigner 3s;
+}
+
+.DesignGrafico {
+
+  width: 45%;
+  animation: DesignGrafico 3s;
+}
+
+@keyframes EdicaoDeFotos {
+
+  0% {
+
+    width: 0%;
+
+  }
+
+  100% {
+
+    width: 70%;
+  }
+
+}
+
+@keyframes figma {
+
+  0% {
+
+    width: 0%;
+
+  }
+
+  100% {
+
+    width: 55%;
+  }
+
+}
+
+@keyframes WebDesigner {
+
+  0% {
+
+    width: 0%;
+
+  }
+
+  100% {
+
+    width: 45%;
+  }
+
+}
+
+@keyframes DesignGrafico {
+
+  0% {
+
+    width: 0%;
+
+  }
+
+  100% {
+
+    width: 45%;
+  }
+
+}
+
+
+
+
+.sobre h1 .typed-text-02 {
+  font-weight: normal;
+  color: #000000;
+}
+
+.sobre h1 .cursor-02 {
+  display: inline-block;
+  background-color: #d3caca;
+  margin-left: 0.1rem;
+  width: 3px;
+  animation: blink 1s infinite;
+}
+
+.sobre h1 .cursor-02.typing-02 {
+  animation: none;
+}
+
+@keyframes blink {
+  0% {
+    background-color: #d3caca;
+  }
+
+  49% {
+    background-color: #d3caca;
+  }
+
+  50% {
+    background-color: transparent;
+  }
+
+  99% {
+    background-color: transparent;
+  }
+
+  100% {
+    background-color: #d3caca;
+  }
+}
+
+
+
+.Projetos{
+
+  background: #000;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.heading{
+
+text-align: center;
+align-items: center;
+font-family: Loud;
+font-size: 40px;
+color: #fff;
+position: relative;
+bottom: 15vh;
+right: 3vh;
+}
+
+
+.heading:hover {
+  color: rgba(221, 89, 24, 1);
+}
+
+.heading::after {
+  content: '';
+  position: absolute;
+  left: 35%;
+  top: 50px;
+
+  width: 10%;
+  height: 2px;
+  background: linear-gradient(90deg, rgba(221, 89, 24, 1) 12%, rgba(255, 216, 14, 1) 100%);
+
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.4s;
+}
+
+.heading:hover::after {
+
+  transform: scaleX(1);
+  transform-origin: left;
+  transition: transform 0.4s;
+
+}
+
+.portifolio-container{
+
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+align-items: center;
+gap: 2.3rem;
+position: relative;
+left: 25vh;
+top: 15vh;
+
+}
+
+.portifolio-container .portifolio-box{
+
+position: relative;
+border-radius: 2rem;
+box-shadow: 0 0 1rem #000000;
+overflow: hidden;
+display: flex;
+width: 40vh;
+bottom: 15vh
+
+}
+
+.portifolio-box img{
+
+  width: 100%;
+  transition: .5s ease;
+}
+
+.portifolio-box:hover img{
+
+transform: scale(1.5);
+
+}
+
+.portifolio-box .portifolio-layer{
+
+position: absolute;
+bottom: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background: linear-gradient(rgba(0, 0, 0, .1), #080707);
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+text-align: center;
+transform: translateY(100%);
+transition: .5s ease;
+}
+
+.portifolio-box:hover .portifolio-layer{
+
+transform: translateY(0);
+
+}
+
+
+.portifolio-layer h4{
+
+position: relative;
+font-size: 1.5rem;
+text-align: center;
+color: #fff;
+font-family: Loud;
+}
+
+.portifolio-layer h4:hover {
+  color: #e4d612;
+}
+
+.portifolio-layer h4::after {
+  content: '';
+  position: absolute;
+  left: 2%;
+  top: 27px;
+
+  width: 20%;
+  height: 2px;
+  background: #e4d612;
+
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.4s;
+}
+
+.portifolio-layer h4:hover::after {
+
+  transform: scaleX(1);
+  transform-origin: left;
+  transition: transform 0.4s;
+
+}
+
+.portifolio-layer p{
+
+  position: relative;
+font-size: 0.9rem;
+text-align: center;
+color: #fff;
+}
+
+
+.portifolio-layer a{
+
+display: inline-block;
+justify-content: center;
+align-items: center;
+width: 8rem;
+height: 3rem;
+background: #ffffff;
+border-radius: 30px;
+text-decoration: none;
+margin-top: 12px;
+}
+
+.portifolio-layer a h3{
+
+position: relative;
+text-align: center; 
+text-decoration: none;
+font-size: 1rem;
+color: #000;
+font-family: Loud;
+top: 13px;
+
+}
+
+@media (max-width: 800px) {
+  
+  body{
+
+overflow-x: hidden;
+
+  }
+
+
+.button_nav{
+
+right: 5vh;
+
+}
+
+.caixa{
+
+display: none;
+
+}
+
+.borda {
+
+  
+  height: 1.8vh;
+  background-color: #000;
+
+}
+
+.borda .image-borda {
+
+  position: absolute;
+  width: 87.5vh;
+
+  overflow: hidden;
+  top: 72%;
+  left: -11%;
+  z-index: -1;
+}
+
+.text h1 {
+  
+  font-size: 5vh;
+  bottom: 40vh;
+
+}
+.text h2 {
+
+  bottom: 30vh;
+ 
+}
+
+.Pagina02{
+
+display: inline-block;
+padding-top: 30vh;
+padding-bottom: 40vh;
+}
+
+.card{
+
+width: 400px;
+display: inline-block;
+position: relative;
+right: 3.5vh;
+}
+
+.card .card-header {
+  position: relative;
+  height: 100px;
+  
+}
+
+.card .card-body .name {
+  top: -4vh;
+  position: relative;
+  font-size: 30px;
+}
+
+.card .card-body .name:hover {
+  font-size: 30px;
+  top: -4vh;
+}
+
+.card .card-body .texto-card{
+
+top: -3vh;
+position: relative;
+}
+
+.card .card-body .job {
+  top: -2vh;
+  position: relative;
+  font-size: 18px;
+
+}
+
+
+
+.habilidades{
+
+  width: 40vh;
+  height: 60vh;
+  border-radius: 20px;
+  background-color: transparent;
+  overflow: hidden;
+  display: inline-block;
+  position: relative;
+  top: 10vh;
+  right: 87vh;
+
+}
+
+.habilidades h1{
+
+font-size: 26px;
+
+}
+
+.habilidades h1::after {
+  content: '';
+  position: absolute;
+  left: 2%;
+  top: 34px;
+}
+
+
+.design{
+
+  width: 40vh;
+  height: 60vh;
+  border-radius: 20px;
+  overflow: hidden;
+  background-color: transparent;
+  display: inline-block;
+  position: relative;
+  top: 20vh;
+  right: 87vh;
+}
+
+.design h1{
+
+  font-size: 30px;
+  
+  }
+
+  .design h1::after {
+    content: '';
+    position: absolute;
+    left: 17%;
+    top: 38px;
+  }
+
+
+  .Projetos{
+
+     
+
+    background: #000;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 300px;
+
+}
+
+
+  .portifolio-container{
+
+    display: block;
+    align-items: center;
+    gap: 2.3rem;
+    position: relative;
+    left: 13vh;
+    top: 35vh;
+    }
+    
+    .portifolio-container .portifolio-box{
+    
+    position: relative;
+    border-radius: 2rem;
+    overflow: hidden;
+    display: flex;
+    width: 40vh;
+    bottom: -5vh;
+    margin: 30px;
+  
+    
+    }
+
+    .portifolio-layer a{
+
+  
+      width: 6rem;
+      height: 2rem;
+
+    }
+
+    .portifolio-layer a h3{
+
+  font-size: 12px;
+  top: 5px;
+
+
+    }
+
+    .portifolio-layer p{
+
+      position: relative;
+    font-size: 0.7rem;
+    text-align: center;
+    color: #fff;
+    }
+
+    .heading{
+
+      text-align: center;
+      align-items: center;
+      font-size: 30px;
+      position: relative;
+      bottom: -30vh;
+      right: 2vh;
+      }
+
+      .heading::after {
+        content: '';
+        position: absolute;
+        left: 10%;
+        top: 36px;
+        width: 20vh;
+      }
+
+
+.navigation>li{
+
+display: none;
+
+}
+
+@media (max-width: 430px) {
+  
+  body {
+
+    background: rgb(255, 216, 14);
+  background: linear-gradient(90deg, rgba(255, 216, 14, 1) 12%, rgba(221, 89, 24, 1) 100%);
+  
+  }
+
+  section{
+
+overflow: hidden;
+
+  }
+
+.caixa{
+
+display: none;
+
+}
+
+.borda {
+
+  
+  height: 3vh;
+  background-color: #000;
+  overflow: hidden;
+
+
+}
+
+.borda .image-borda {
+
+  position: absolute;
+  width: 40vh;
+
+  overflow: hidden;
+  top: 81%;
+  left: 3%;
+  z-index: -1;
+}
+
+.text{
+
+
+  overflow: hidden;
+}
+
+.text h1 {
+  
+  font-size: 3vh;
+  bottom: 50vh;
+  overflow: hidden;
+
+}
+.text h2 {
+
+  bottom: 45vh;
+  font-size: 20px;
+  overflow: hidden;
+ 
+}
+
+.Pagina02{
+
+display: inline-block;
+padding-top: 30vh;
+
+}
+
+.card{
+
+width: 320px;
+display: inline-block;
+position: relative;
+right: 4.8vh;
+}
+
+.card .card-header {
+  position: relative;
+  height: 100px;
+  
+}
+
+.card .card-body .name {
+  top: -2vh;
+  position: relative;
+  font-size: 30px;
+}
+
+.card .card-body .name:hover {
+  font-size: 30px;
+  top: -3vh;
+}
+
+.card .card-body .texto-card{
+
+top: -1vh;
+position: relative;
+}
+
+.card .card-body .job {
+  top: 1vh;
+  position: relative;
+  font-size: 18px;
+
+}
+
+
+
+.habilidades{
+
+  width: 40vh;
+  height: 57vh;
+  border-radius: 20px;
+  background-color: transparent;
+  overflow: hidden;
+  display: inline-block;
+  position: relative;
+  top: 10vh;
+  right: 103vh;
+
+}
+
+.habilidades h1{
+
+font-size: 29px;
+
+}
+
+.design{
+
+  width: 40vh;
+  height: 57vh;
+  border-radius: 20px;
+  overflow: hidden;
+  background-color: transparent;
+  display: inline-block;
+  position: relative;
+  top: 15vh;
+  right: 103vh;
+}
+
+.design h1{
+
+  font-size: 30px;
+  
+  }
+
+  .portifolio-container{
+
+    display: block;
+    align-items: center;
+    gap: 2.3rem;
+    position: relative;
+    left: 8vh;
+    top: 45vh;
+    }
+
+    .Projetos{
+
+     
+
+        background: #000;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+        overflow: hidden;
+  
+
+    }
+    
+    .portifolio-container .portifolio-box{
+    
+    position: relative;
+    border-radius: 2rem;
+    overflow: hidden;
+    display: flex;
+    width: 20vh;
+    bottom: 15vh;
+    margin: 30px;
+    overflow: hidden;
+  
+    
+    }
+
+    .portifolio-layer a{
+
+  
+      width: 6rem;
+      height: 3rem;
+
+    }
+
+    .portifolio-layer a h3{
+
+  font-size: 12px;
+  top: 3px;
+
+
+    }
+
+    .portifolio-layer h4{
+
+      position: relative;
+      font-size: 1.0rem;
+      text-align: center;
+      color: #fff;
+      font-family: Loud;
+      }
+      
+
+
+    .portifolio-layer p{
+
+      position: relative;
+    font-size: 0.5rem;
+    text-align: center;
+    color: #fff;
+    }
+
+    .heading{
+
+      text-align: center;
+      align-items: center;
+      font-size: 30px;
+      position: relative;
+      bottom: -29vh;
+      right: 2vh;
+      }
+
+
+.navigation>li{
+
+display: none;
+
+}
+
+}
+}
